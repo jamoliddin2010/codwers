@@ -7,10 +7,3 @@ function maps(arr) {
   newArr = arr.map(x => x * 2);
 }
 console.log(newArr);
-
-
-
-
-
-
-
