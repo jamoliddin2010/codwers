@@ -18,5 +18,5 @@ function sum(numbers) {
     total += numbers[i];
   }
 
-  return total;
+//   return total;
 }
