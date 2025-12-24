@@ -9,14 +9,41 @@
 // console.log(newArr);
 
 
+// javob
+
+// function sum(numbers) {
+//   let total = 0;
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     total += numbers[i];
+//   }
+
+// //   return total;
+// }
 
 
-function sum(numbers) {
-  let total = 0;
 
-  for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i];
+
+// savol//
+
+// ['hello', 'world', 'this', 'is', 'great'] => 'hello world this is great'
+
+
+
+// javob
+
+function smash(words) {
+  let sentence = "";
+
+  for (let i = 0; i < words.length; i++) {
+    sentence += words[i];
+    if (i !== words.length - 1) {
+      sentence += " ";
+    }
   }
 
-//   return total;
+  return sentence;
 }
+
+
+
