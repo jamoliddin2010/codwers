@@ -122,11 +122,19 @@
 
 // javob//////
 
-function grow(arr) {
-  let result = 1;
-  arr.map(num => result *= num);
-  return result;
-}
+// function grow(arr) {
+//   let result = 1;
+//   arr.map(num => result *= num);
+//   return result;
+// }
 
+
+
+
+
+
+function typeOfSum(a, b) {
+ return typeof (a+b)
+}
 
 
