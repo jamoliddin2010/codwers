@@ -106,10 +106,26 @@
 
 
 
-function squareSum(numbers){
-  let sum = 0
-  numbers.forEach((value) => sum += value**2)
-  return sum
+// function squareSum(numbers){
+//   let sum = 0
+//   numbers.forEach((value) => sum += value**2)
+//   return sum
+// }
+
+
+
+
+// savol
+// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+
+
+// javob//////
+
+function grow(arr) {
+  let result = 1;
+  arr.map(num => result *= num);
+  return result;
 }
 
 
