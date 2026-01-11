@@ -180,8 +180,187 @@
 
 
 
-var OrderPeople = function(people){
-  return people.sort((a,b)=>a.age -b.age ); 
+// var OrderPeople = function(people){
+//   return people.sort((a,b)=>a.age -b.age ); 
+// }
+//  savol Write a function that checks whether all elements in an array are square numbers. The function should be able to take any number of array elements.
+
+// Your function should return true if all elements in the array are square numbers and false if not.
+
+// An empty array should return undefined / None / nil /false (for C). You can assume that all array elements will be positive integers.
+
+// Examples:
+
+// isSquare([1, 4, 9, 16]) --> true
+
+// isSquare([3, 4, 7, 9]) --> false
+
+// isSquare([]) --> undefined
+// is_square([1, 4, 9, 16]) --> True
+
+// is_square([3, 4, 7, 9]) --> False
+
+// is_square([]) --> None
+
+
+
+// let isSquare= (arr) => arr.length ? arr.map((n) => !`${Math.sqrt(n)}`.includes(".")).every((v)=>v):undefined;
+
+
+// 2
+
+// let transactions = [
+//   { type: "income", amount: 500 },
+//   { type: "expense", amount: 200 },
+//   { type: "income", amount: 1500 },
+//   { type: "expense", amount: 300 },
+//   { type: "income", amount: 700 }
+// ];
+
+
+// // let newansactions = transactions.filter(obj => {
+//     }
+// // console.log(newansactions)
+
+// let newtransactions = transactions.findIndex(obj=>obj.type === "expense");
+// console.log(newtransactions)
+
+// let newtransactions= newtransactions.map(obj => obj.type).lastIndexOf("income");
+// console.log(newtransactions);
+
+
+
+
+
+
+
+// 1 
+// let students = [
+//   { name: "Ali", score: 70, active: true },
+//   { name: "Vali", score: 85, active: false },
+//   { name: "Hasan", score: 90, active: true },
+//   { name: "Husan", score: 60, active: true }
+// ];
+
+
+
+// students = students.filter((obj)=>{
+//     if(obj.active){
+//         obj.score = obj.score *0.1 + obj.score;
+//     }
+// });
+// let sum = students.resdyce((acc,curr)=> acc+ curr.score,0)/students.length;
+// console.log(students);
+// console.log(+sum.toFixed(2));
+
+
+
+
+// Mahsulotlarni:
+
+// narx bo‘yicha kamayish tartibida saralang
+
+// natijada faqat name va price qaytsin
+
+// 3==///////////////////////////////////////////////
+
+// let products = [
+//   { name: "Laptop", price: 1200 },
+//   { name: "Phone", price: 800 },
+//   { name: "Tablet", price: 600 }
+// ];
+
+
+// products = products.sort((a, b) => a.price - b.price)
+// console.log(products);
+// 4///////////////////////////////////////////////////////==
+ // let employees = [
+//   { name: "Ali", verified: true, role: "user" },
+//   { name: "Vali", verified: true, role: "manager" },
+//   { name: "Hasan", verified: true, role: "user" }
+// ];
+
+
+// let employees = employees.filter((obj)=>obj.role === "manager")
+
+// console.log(newemployees);
+
+// 5=========================////////////
+
+// let sales = [
+//   [120, 300],[450, 100],[600, 200]
+// ];
+
+// sales = sales.flat(2)
+
+// let newsales = sales.reduce((acc, curr) => acc + curr, 0)
+
+// console.log(newsales);
+
+
+// 6-masala
+
+// let users = [
+//   { name: "Ali", skills: ["html", "css", "js"] },
+//   { name: "Vali", skills: ["node", "js", "mongo"] },
+//   { name: "Hasan", skills: ["css", "figma"] }
+// ];
+// let users = users.flatMap(user => user.skills).filter(skill => skill.includes("js")); 
+// console.log(users);
+
+
+
+
+//8////////////////////////////////////////
+
+
+// let athletes = [
+//   { name: "Ali", time: 12.5 },
+//   { name: "Vali", time: 11.8 },
+//   { name: "Hasan", time: 12.1 }
+// ];
+
+// athletes = athletes.sort((a, b) => a.time - b.time)
+// console.log(athletes);
+
+
+
+
+// 9 masala//////////////////////////////////////
+
+
+// let data = [5, 10, 15, 20, 25, 30];
+// data.fill(0,4,6)
+// let newdata = data.copyWithin(0,1)
+// console.log(newdata);
+
+
+
+
+
+let results = [
+  { name: "Ali", score: 78 },
+  { name: "Vali", score: 92 },
+  { name: "Hasan", score: 55 },
+  { name: "Husan", score: 66 }
+];
+let sum = results.filter((obj)=> obj.score > 60)
+  sum.sort((a, b)=> b.score - a.score)
+for (let s of sum) {
+  if (s.score >= 90) s.grade = "A";
+ else if(s.score >= 75) s.grade = "B"
+ else s.grade = "C"
 }
+
+let res = sum.reduce((acc, curr) => acc + curr.score, 0) / sum.length
+console.log(sum);
+console.log(+res.toFixed(2));
+
+
+
+
+
+
+
 
 
