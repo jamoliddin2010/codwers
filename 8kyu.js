@@ -431,12 +431,50 @@
 
 // javob
 
-function killcount(counselors, jason) {
-  let killed = [];
-  for (let i = 0; i < counselors.length; i++) {
-    if (counselors[i][1] < jason) {
-      killed.push(counselors[i][0]);
-    }
-  }
-  return killed;
+// function killcount(counselors, jason) {
+//   let killed = [];
+//   for (let i = 0; i < counselors.length; i++) {
+//     if (counselors[i][1] < jason) {
+//       killed.push(counselors[i][0]);
+//     }
+//   }
+//   return killed;
+// }
+
+// savol
+
+// r input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+
+// function countPositivesSumNegatives(input) {
+//   if (!input || input.length === 0) return [];
+
+//   let positives = input.filter(n => n > 0).length;
+//   let negatives = input.filter(n => n < 0).reduce((sum, n) => sum + n, 0);
+
+//   return [positives, negatives];
+// }
+
+
+
+
+// savol
+
+// Can you find the needle in the haystack?
+
+// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+// After your function finds the needle it should return a message (as a string) that says:
+
+// "found the needle at position " plus the index it found the needle, so:
+
+// Example(Input --> Output)
+
+// ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+// Note: In COBOL, it should return "found the needle at position 6"
+
+// javob
+
+function findNeedle(haystack) {
+  return `found the needle at position ${haystack.indexOf("needle")}`;
 }
