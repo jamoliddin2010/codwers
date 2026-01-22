@@ -621,11 +621,43 @@
 
 
 
-let add = (n1, n2, max = 0, str = "") => {
-  n1 > n2 ? (max = n1) : (max = n2);
-  let arr1 = `${n1}`.split("");
-  let arr2 = `${n2}`.split("");
-  for (let i = 1; i <= `${max}`.length; i++)
-    str = (+arr1.at(-i) || 0) + (+arr2.at(-i) || 0) + str;
-  return +str;
-};
+// let add = (n1, n2, max = 0, str = "") => {
+//   n1 > n2 ? (max = n1) : (max = n2);
+//   let arr1 = `${n1}`.split("");
+//   let arr2 = `${n2}`.split("");
+//   for (let i = 1; i <= `${max}`.length; i++)
+//     str = (+arr1.at(-i) || 0) + (+arr2.at(-i) || 0) + str;
+//   return +str;
+// };
+
+
+
+// savol
+// When sorted by "a", this:
+
+// [
+//   {"a": 1, "b": 3},
+//   {"a": 3, "b": 2},
+//   {"a": 2, "b": 40},
+//   {"a": 4, "b": 12}
+// ]
+// should return:
+
+// [
+//   {"a": 4, "b": 12},
+//   {"a": 3, "b": 2},
+//   {"a": 2, "b": 40},
+//   {"a": 1, "b": 3}
+// ]
+
+
+
+
+
+
+// javob
+
+
+function sortByValue(arr, sortBy) {
+  return arr.sort((a, b) => b[sortBy] - a[sortBy]);
+}
