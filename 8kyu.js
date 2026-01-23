@@ -671,8 +671,19 @@
 
 
 
-function type(v) {
-  if (Array.isArray(v)) return "array";
-  if (v instanceof Date) return "date";
-  return typeof v;
-}
+// function type(v) {
+//   if (Array.isArray(v)) return "array";
+//   if (v instanceof Date) return "date";
+//   return typeof v;
+// }
+
+
+
+
+
+
+
+
+
+
+f=a=>{r=[];for(i=a[0];i<a.at(-1);i++)!a.includes(i)&&r.push(i);return r}
