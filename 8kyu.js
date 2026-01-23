@@ -658,6 +658,21 @@
 // javob
 
 
-function sortByValue(arr, sortBy) {
-  return arr.sort((a, b) => b[sortBy] - a[sortBy]);
+// function sortByValue(arr, sortBy) {
+//   return arr.sort((a, b) => b[sortBy] - a[sortBy]);
+// }
+
+// function type(value) {
+//   if (Number.isNaN(value)) return 'number';
+//   if (Array.isArray(value)) return 'array';
+//   if (value === null) return 'null';
+//   return typeof value;
+// }
+
+
+
+function type(v) {
+  if (Array.isArray(v)) return "array";
+  if (v instanceof Date) return "date";
+  return typeof v;
 }
