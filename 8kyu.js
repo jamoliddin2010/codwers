@@ -678,6 +678,7 @@
 // }
 
 
+// f=a=>{r=[];for(i=a[0];i<a.at(-1);i++)!a.includes(i)&&r.push(i);return r}
 
 
 
@@ -686,4 +687,16 @@
 
 
 
-f=a=>{r=[];for(i=a[0];i<a.at(-1);i++)!a.includes(i)&&r.push(i);return r}
+
+// Write function which will create a string from a list of strings, separated by space.
+
+// Example:
+
+// ["hello", "world"] -> "hello world"
+
+
+
+
+function sentence(list) {
+  return list.join(' ');
+}
