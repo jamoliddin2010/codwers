@@ -697,6 +697,56 @@
 
 
 
-function sentence(list) {
-  return list.join(' ');
+// function sentence(list) {
+//   return list.join(' ');
+
+
+
+
+// }
+
+
+
+
+// savol
+// Write a method that returns true if a given parameter is a power of 4, and false if it's not. If parameter is not an Integer (eg String, Array) method should return false as well.
+
+// (In C# Integer means all integer Types like Int16,Int32,.....)
+
+// Examples
+// powerOf4(1024) // returns true
+// powerOf4(44) // returns false
+// powerOf4("not a positive integer") // returns false
+
+
+
+// function powerOf4(n) {
+//   console.log(n)
+//   if(n===1|| n===0 || n===4) return true;
+//   if(Number.isInteger(n)&& Number.isInteger(Math.pow(1/4))) return true;
+//      return false;
+// }; 
+
+
+// savol
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives. [1, 2, 3, 4, 5] --> [-1, -2, -3, -4, -5] [1, -2, 3, -4, 5] --> [-1, 2, -3, 4, -5] [] --> [] You can assume that all values are integers. Do not mutate the input array.
+
+
+
+
+
+
+
+function invert(array) {
+  let a = [];
+  for (let i = 0; i < array.length; i++) {
+    a.push(array[i] * -1);
+  }
+  return a;
 }
+
+
+
+
+
+
