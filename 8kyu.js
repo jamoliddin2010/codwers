@@ -852,18 +852,32 @@ function invert(array) {
 
 
 
-function loopArr(arr, direction, steps) {
-  let res = arr.slice(); 
+// function loopArr(arr, direction, steps) {
+//   let res = arr.slice(); 
 
-  for (let i = 0; i < steps; i++) {
-    if (direction === 'left') {
-      res.push(res.shift());
-    } else if (direction === 'right') {
-      res.unshift(res.pop());
-    }
-  }
+//   for (let i = 0; i < steps; i++) {
+//     if (direction === 'left') {
+//       res.push(res.shift());
+//     } else if (direction === 'right') {
+//       res.unshift(res.pop());
+//     }
+//   }
 
-  return res;
+//   return res;
+// }
+
+// You have a quiver of arrows, but some have been damaged. The quiver contains arrows with an optional range information (different types of targets are positioned at different ranges), so each item is an arrow.
+// You need to verify that you have some good ones left, in order to prepare for battle:
+
+// anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}])
+// If an arrow in the quiver does not have a damaged status, it means it's new.
+
+// The expected result is a boolean, indicating whether you have any good arrows left. ishlab ber
+
+
+function anyArrows(arrows) {
+  return arrows.some(arrow => arrow.damaged !== true);
 }
+
 
 
