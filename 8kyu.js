@@ -875,9 +875,40 @@ function invert(array) {
 // The expected result is a boolean, indicating whether you have any good arrows left. ishlab ber
 
 
-function anyArrows(arrows) {
-  return arrows.some(arrow => arrow.damaged !== true);
+// function anyArrows(arrows) {
+//   return arrows.some(arrow => arrow.damaged !== true);
+// }
+
+
+
+
+// savol
+// Complete the function which converts a binary number (given as a string) to a decimal number.
+
+
+
+
+
+
+// function binToDec(bin) {
+//   return parseInt(bin, 2);
+// }
+
+// savol
+// Description:
+// Build a function that returns an array of integers from n to 1 where n>0.
+
+// Example : n=5 --> [5,4,3,2,1]
+
+
+function reverseSeq(n) {
+  const result = [];
+  for (let i = n; i >= 1; i++) {
+    result.push(i);
+  }
+  return result;
 }
+
 
 
 
