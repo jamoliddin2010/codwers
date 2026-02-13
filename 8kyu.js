@@ -1044,7 +1044,18 @@ function invert(array) {
 
 // In this kata, the function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should return an empty string.
 
-function toFreud(string) {
-  if (!string) return "";
-  return string.split(" ").map(() => "s").join(" ");
+// function toFreud(string) {
+//   if (!string) return "";
+//   return string.split(" ").map(() => "s").join(" ");
+// }
+
+
+
+
+// Description: You are given two interior angles (in degrees) of a triangle.  Write a function to return the 3rd.  Note: only positive integers will be tested. 
+
+
+function otherAngle(a, b) {
+  return 180 - (a + b);
 }
+
