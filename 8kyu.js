@@ -1075,17 +1075,37 @@ function invert(array) {
 
 
 
-function listToArray(list) {
-  const result = [];
+// function listToArray(list) {
+//   const result = [];
   
-  while (list !== null) {
-    result.push(list.value);
-    list = list.next;
-  }
+//   while (list !== null) {
+//     result.push(list.value);
+//     list = list.next;
+//   }
   
-  return result;
-}
+//   return result;
+// }
 
+
+// savol
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+
+// Note for Java: the return type and methods have not been provided to make it a bit more challenging.
+
+// var addOne = add(1);
+// addOne(3); // 4
+
+// var addThree = add(3);
+// addThree(3); // 6
+// Functional ProgrammingFundamentals
+
+
+
+function add(n) {
+  return function(x) {
+    return x + n;
+  };
+}
 
 
 
