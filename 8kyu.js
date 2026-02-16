@@ -1118,18 +1118,40 @@ function invert(array) {
 // dog.name = 'Lassie';
 // dog.name; // 'Lassie'
 
-class Animal {
-  constructor(name, type) {
-    this.name = name;
-    this.type = type;
-  }
+// class Animal {
+//   constructor(name, type) {
+//     this.name = name;
+//     this.type = type;
+//   }
 
-  toString() {
-    return `${this.name} is a ${this.type}`;
+//   toString() {
+//     return `${this.name} is a ${this.type}`;
+//   }
+// }
+
+
+
+
+// savol
+// class Animal {
+//     constructor(name, species, age, health, weight, color) {
+//         this.name = name;
+//         this.species = species;
+//         this.age = age;
+//         this.health = health;
+//         this.weight = weight;
+//         this.color = color;
+//     }
+// }
+function makeClass (...arr){
+  return class{
+    constructor(...a){
+              for (let i = 0; i < arr.length; i++) {
+            this[arr[i]] = a[i];
+        }
+    }
   }
 }
-
-
 
 
 
