@@ -1166,12 +1166,37 @@ function invert(array) {
 // Assume that [a,b,c,d] and the slope are all integers (no floating numbers!)
 
 
-function slope(points) {
-  const [a, b, c, d] = points;
+// function slope(points) {
+//   const [a, b, c, d] = points;
   
-  if (c - a === 0) {
-    return "undefined";
+//   if (c - a === 0) {
+//     return "undefined";
+//   }
+  
+//   return String((d - b) / (c - a));
+// }
+// savol
+// We can rewrite it using a for loop, like this:
+
+// function sum1_100(){
+//   for (let sum=0,num=1;num<=100;num++){
+//     sum+=num;
+//   }
+//   return sum;
+// }
+// As you see, there are three parts in the parentheses, separated by ";". The first part, var sum=0,num=1, is the initialization. This part will run before the loop starts. The second part, num<=100 is the conditional expression. The conditional expression is checked before the start of each time through the loop. When the value of the expression is false, the loop will be terminated. The third part, num++ will run after the code block, and is usually used for increasing and decreasing variables.
+
+// For the example above, the running order of the code is:
+function pickIt(arr) {
+  let odd = [], even = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    } else {
+      odd.push(arr[i]);
+    }
   }
   
-  return String((d - b) / (c - a));
+  return [odd, even];
 }
