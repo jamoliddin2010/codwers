@@ -1187,16 +1187,36 @@ function invert(array) {
 // As you see, there are three parts in the parentheses, separated by ";". The first part, var sum=0,num=1, is the initialization. This part will run before the loop starts. The second part, num<=100 is the conditional expression. The conditional expression is checked before the start of each time through the loop. When the value of the expression is false, the loop will be terminated. The third part, num++ will run after the code block, and is usually used for increasing and decreasing variables.
 
 // For the example above, the running order of the code is:
-function pickIt(arr) {
-  let odd = [], even = [];
+// function pickIt(arr) {
+//   let odd = [], even = [];
   
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      even.push(arr[i]);
-    } else {
-      odd.push(arr[i]);
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       even.push(arr[i]);
+//     } else {
+//       odd.push(arr[i]);
+//     }
+//   }
+  
+//   return [odd, even];
+// }
+// savol
+// A zero-indexed array arr consisting of n integers is given. The dominator of array arr is the value that occurs in more than half of the elements of arr.
+// For example, consider array arr such that arr = [3,4,3,2,3,1,3,3]
+// The dominator of arr is 3 because it occurs in 5 out of 8 elements of arr and 5 is more than a half of 8.
+// Write a function dominator(arr) that, given a zero-indexed array arr consisting of n integers, returns the dominator of arr. The function should return −1 if array does not have a dominator. All values in arr will be >=0.
+
+function dominator(arr) {
+  const counts = {};
+  const half = Math.floor(arr.length / 2);
+
+  for (let num of arr) {
+    counts[num] = (counts[num] || 0) + 1;
+
+    if (counts[num] > half) {
+      return num;
     }
   }
-  
-  return [odd, even];
+
+  return -1;
 }
