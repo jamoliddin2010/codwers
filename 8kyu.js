@@ -1206,17 +1206,46 @@ function invert(array) {
 // The dominator of arr is 3 because it occurs in 5 out of 8 elements of arr and 5 is more than a half of 8.
 // Write a function dominator(arr) that, given a zero-indexed array arr consisting of n integers, returns the dominator of arr. The function should return −1 if array does not have a dominator. All values in arr will be >=0.
 
-function dominator(arr) {
-  const counts = {};
-  const half = Math.floor(arr.length / 2);
+// function dominator(arr) {
+//   const counts = {};
+//   const half = Math.floor(arr.length / 2);
 
-  for (let num of arr) {
-    counts[num] = (counts[num] || 0) + 1;
+//   for (let num of arr) {
+//     counts[num] = (counts[num] || 0) + 1;
 
-    if (counts[num] > half) {
-      return num;
-    }
+//     if (counts[num] > half) {
+//       return num;
+//     }
+//   }
+
+//   return -1;
+// }
+// savol
+// Given a number n, draw stairs using the letter "I", n tall and n wide, with the tallest in the top left.
+
+// For example n = 3 result in:
+
+// "I\n I\n  I"
+// or printed:
+
+// I
+//  I
+//   I
+// Another example, a 7-step stairs should be drawn like this:
+
+// I
+//  I
+//   I
+//    I
+//     I
+//      I
+//       I
+function drawStairs(n) {
+  let result = [];
+  
+  for (let i = 0; i < n; i++) {
+    result.push(" ".repeat(i) + "I");
   }
-
-  return -1;
+  
+  return result.join("\n");
 }
