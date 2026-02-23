@@ -1239,13 +1239,29 @@ function invert(array) {
 //    I
 //     I
 //      I
-//       I
-function drawStairs(n) {
-  let result = [];
+// //       I
+// function drawStairs(n) {
+//   let result = [];
   
-  for (let i = 0; i < n; i++) {
-    result.push(" ".repeat(i) + "I");
+//   for (let i = 0; i < n; i++) {
+//     result.push(" ".repeat(i) + "I");
+//   }
+  
+//   return result.join("\n");
+// }
+
+// savol
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+function greet(name, owner) {
+  if (name === owner) {
+    return "Hello boss";
+  } else {
+    return "Hello guest";
   }
-  
-  return result.join("\n");
 }
