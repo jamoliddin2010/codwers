@@ -1279,17 +1279,42 @@ function invert(array) {
 // Each event can be downcase/lowercase, or uppercase. If it is downcase/lowercase you need 1 coffee by events and if it is uppercase you need 2 coffees.
 
 
-function howMuchCoffee(events) {
-  const validEvents = ['cw', 'cat', 'dog', 'movie'];
-  let coffee = 0;
+// function howMuchCoffee(events) {
+//   const validEvents = ['cw', 'cat', 'dog', 'movie'];
+//   let coffee = 0;
 
-  for (let event of events) {
-    const lower = event.toLowerCase();
+//   for (let event of events) {
+//     const lower = event.toLowerCase();
     
-    if (validEvents.includes(lower)) {
-      coffee += (event === lower) ? 1 : 2;
+//     if (validEvents.includes(lower)) {
+//       coffee += (event === lower) ? 1 : 2;
+//     }
+//   }
+
+//   return coffee > 3 ? 'You need extra sleep' : coffee;
+// }
+// savol
+// In this Kata, you will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+
+// make as few changes as possible.
+// if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+// For example:
+
+// solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+// solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+// solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+// More examples in test cases. Good luck!
+function solve(s) {
+  let lower = 0;
+  let upper = 0;
+
+  for (let char of s) {
+    if (char === char.toLowerCase()) {
+      lower++;
+    } else {
+      upper++;
     }
   }
 
-  return coffee > 3 ? 'You need extra sleep' : coffee;
+  return upper > lower ? s.toUpperCase() : s.toLowerCase();
 }
