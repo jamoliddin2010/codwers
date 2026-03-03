@@ -1331,17 +1331,44 @@ function invert(array) {
 // Each member of the returned array should be unique. (eg: the valid answer for powers(2) is [2], not [1, 1])
 
 // Members should be sorted in ascending order (small -> large). (eg: the valid answer for powers(6) is [2, 4], not [4, 2])
-function powers(n) {
-  const result = [];
-  let power = 1;
+// function powers(n) {
+//   const result = [];
+//   let power = 1;
 
-  while (n > 0) {
-    if (n % 2 === 1) {
-      result.push(power);
-    }
-    n = Math.floor(n / 2);
-    power *= 2;
-  }
+//   while (n > 0) {
 
-  return result;
-}
+//     if (n % 2 === 1) {
+//       result.push(power);
+//     }
+//     n = Math.floor(n / 2);
+//     power *= 2;
+//   }
+
+//   return result;
+
+// }
+
+
+
+// Create a function which accepts one arbitrary string as an argument, and return a string of length 26.
+
+// The objective is to set each of the 26 characters of the output string to either '1' or '0' based on the fact whether the Nth letter of the alphabet is present in the input (independent of its case).
+
+// So if an 'a' or an 'A' appears anywhere in the input string (any number of times), set the first character of the output string to '1', otherwise to '0'. if 'b' or 'B' appears in the string, set the second character to '1', and so on for the rest of the alphabet.
+
+// For instance:
+
+// "a   **&  cZ"  =>  "10100000000000000000000001"
+// "aaaaaaa79345675"  =>  "10000000000000000000000000"
+// "&%#*"  =>  "00000000000000000000000000"
+// function alphabetPresence(text) {
+//   const letters = new Set(text.toLowerCase());
+//   let result = "";
+
+//   for (let i = 0; i < 26; i++) {
+//     const char = String.fromCharCode(97 + i);
+//     result += letters.has(char) ? "1" : "0";
+//   }
+
+//   return result;
+// }
