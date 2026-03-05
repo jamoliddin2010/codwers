@@ -1372,3 +1372,24 @@ function invert(array) {
 
 //   return result;
 // }
+// savol
+// You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+// If the string's length is odd, return the middle character.
+// If the string's length is even, return the middle 2 characters.
+// Examples:
+// "test" --> "es"
+// "testing" --> "t"
+// "middle" --> "dd"
+// "A" --> "A"
+
+function getMiddle(s) {
+  let n = s.length;
+  let mid = Math.floor(n / 2);
+
+  if (n % 2 === 0) {
+    return s[mid - 1] + s[mid];
+  } else {
+    return s[mid];
+  }
+}
